@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Recipe Box</title>
+</head>
+<body>
+    <div class="top_layer">
+    </div>
+    <header>
+        <h1>Recipe Box</h1>
+        <input type="submit" value="Add Recipe" id="btn_add_recipe">
+    </header>
+    <main>
+        <ul class="recipe" id="recipeList">
+        </ul>
+    </main>
+
+    <div class="recipe_modal" id="recipe_modal">
+        <div class="modal_main">
+                <div class="recipe_modal_header">
+                    <h1>Add Recipe</h1>
+                    <span id="span_close">X</span>
+                </div>
+                <div class="recipe_modal_body">
+                    <fieldset>
+                        <legend>Recipe Name</legend>
+                        <input type="text" name="recipe_name" id="recipe_name" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Ingredients</legend>
+                        <textarea name="ingredients" id="ingredients" rows="10" placeholder="Press enter per ingredients." required></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Steps</legend>
+                        <textarea name="recipe_steps" id="recipe_steps" rows="10" placeholder="Press enter per steps." required></textarea>
+                    </fieldset>
+                </div>
+                <div class="recipe_modal_footer">
+                    <input type="submit" value="Add Recipe" id="btn_submit_recipe">
+                </div>
+        </div>
+    </div>
+
+    <div class="recipe_modal" id="view_recipe">
+        <div class="modal_main">
+            <div class="recipe_modal_header">
+                <h1 id="view_recipe_name">View Recipe</h1>
+                <span id="span_close_view">X</span>
+            </div>
+            <div class="recipe_modal_body">
+                <h1>Ingredients</h1>
+                <p id="recipe_ingredients"></p>
+                <h1>Steps</h1>
+                <p id="view_recipe_steps"></p>
+            </div>
+            <div class="recipe_modal_footer">
+                <input type="submit" value="Edit" id="edit_recipe">
+                <input type="submit" value="Delete" id="delete_recipe">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/app.js"></script>
